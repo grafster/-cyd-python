@@ -82,11 +82,13 @@ display.text(x,y,txt,fgcolor,bgcolor)
 ### Example
 
 #draw 'hello' with white text on black background
+
 display.text(10,295, 'hello', display.color(255,255,255), display.color(0,0,0))
 
 # Large text
 
- display.upscaled_text(x,y,txt,fgcolor,bgcolor=None,upscaling=2):
+ display.upscaled_text(x,y,txt,fgcolor,bgcolor=None,upscaling=2)
+ 
 | Parameter | Description |
 | --- | --- |
 | x | screen x position to display text |
@@ -103,48 +105,57 @@ display.upscaled_text(20, 20, 'Hello', display.color(255,255,255),upscaling=3)
 
 # Circles 
 
-display.circle(x, y, radius, color, fill=False):
+display.circle(x, y, radius, color, fill=False)
 
 | Parameter | Description |
 | --- | --- |
 | x | screen x position to display circle |
 | y | screen y position to display circle |
 | radius | radius of circle in pixels |
-| cor r lour | the colour for the circle |
+| colour | the colour for the circle |
 | fill | whether the circle should be filled with colour |
 
 ### Example
 
 #Draw a blue circle at 150, 50 with a radius of 30, in blue and filled in
+
 display.circle(150, 50, 30, display.color(0,0,255), True)
 
 # Rectangles
 
-    def rect(self,x,y,w,h,color,fill=False):
-        print ('rect {x},{y},{w},{h},{color}')
-| Parameter | Description |
-| --- | --- |
-|r | Red 0-255 |
-|g | Green 0-255 |
-|b | Blue 0-255 |
-
-### Example
-
-red = display.colour(255,0,0)
-
-# Line
-    def line(self, x0, y0, x1, y1, color):
-        print(f'line {x0} {y0} {x1} {y1}')
+display.rect(x,y,w,h,color,fill=False)
 
 | Parameter | Description |
 | --- | --- |
-|r | Red 0-255 |
-|g | Green 0-255 |
-|b | Blue 0-255 |
+| x | screen x position to display rectangle |
+| y | screen y position to display rectangle |
+| w | width of the rectangle in pixels |
+| h | height of rectangle in pixels |
+| colour | the colour for the rectangle |
+| fill | whether the rectangle should be filled with colour |
 
 ### Example
 
-red = display.colour(255,0,0)
+#draw a red rectangle, starting at 20, 20 - 100 wide and 50 tall
+
+display.rect(20,20, 100, 50, display.color(255,0,0), True)
+
+# Draw a single Line
+
+display.line(x0, y0, x1, y1, color)
+
+
+| Parameter | Description |
+| --- | --- |
+| x0 | screen x position to start the line |
+| y0 | screen y position to start the line |
+| x1 | screen x position to end the line |
+| y1 | screen y position to end the line |
+| colour | the colour for the line |
+
+### Example
+
+display.line(20, 100, 400, 120, display.color(0,255,0))
 
 # Tringle
 
