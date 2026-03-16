@@ -7,7 +7,7 @@ The display is 480 pixels wide and 320 high
 x = 0, y = 0 is the top left of the screen
 x = 480, y = 320 is the bottom right of the screen
 
-## Colours
+## Create a colour to use with other functions
 
 display.colour(r, g, b)
 
@@ -86,32 +86,38 @@ display.text(10,295, 'hello', display.color(255,255,255), display.color(0,0,0))
 
 # Large text
 
-    def upscaled_text(self,x,y,txt,fgcolor,*,bgcolor=None,upscaling=2):
-        print('upscaled text ' + txt)
+ display.upscaled_text(x,y,txt,fgcolor,bgcolor=None,upscaling=2):
 | Parameter | Description |
 | --- | --- |
-|r | Red 0-255 |
-|g | Green 0-255 |
-|b | Blue 0-255 |
+| x | screen x position to display text |
+| y | screen y position to display text |
+| txt | the text to display |
+| fgcolour | the foreground colour for the text |
+| bgcolour | the background colour for the text (optional) |
+| upscaling | factor to scale up by, defaults to 2x size - Named parameter |
+
 
 ### Example
 
-red = display.colour(255,0,0)
+display.upscaled_text(20, 20, 'Hello', display.color(255,255,255),upscaling=3)
 
 # Circles 
 
-    def circle(self, x, y, radius, color, fill=False):
-        print('circle')
+display.circle(x, y, radius, color, fill=False):
 
 | Parameter | Description |
 | --- | --- |
-|r | Red 0-255 |
-|g | Green 0-255 |
-|b | Blue 0-255 |
+| x | screen x position to display circle |
+| y | screen y position to display circle |
+| radius | radius of circle in pixels |
+| cor r lour | the colour for the circle |
+| fill | whether the circle should be filled with colour |
 
 ### Example
 
-red = display.colour(255,0,0)
+#Draw a blue circle at 150, 50 with a radius of 30, in blue and filled in
+display.circle(150, 50, 30, display.color(0,0,255), True)
+
 # Rectangles
 
     def rect(self,x,y,w,h,color,fill=False):
