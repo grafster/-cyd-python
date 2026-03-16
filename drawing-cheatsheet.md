@@ -7,16 +7,6 @@
         print(f'line {x0} {y0} {x1} {y1}')
     def triangle(self, x0, y0, x1, y1, x2, y2, color, fill=False):
         print('triangle')
-    def color(self, x,y,z):
-        print(f'color {x} {y} {z}')
-        return 1
-    def colour(self, x,y,z):
-        print(f'color {x} {y} {z}')
-        return 1
-    def pixel(self,x,y,color):
-        print(f'pixel {x} {y} {color}')
-    def fill(self, color):
-        print('fill')
     def text(self,x,y,txt,fgcolor,bgcolor):
         print ('text ' + txt)
     def upscaled_text(self,x,y,txt,fgcolor,*,bgcolor=None,upscaling=2):
@@ -35,9 +25,11 @@ x = 480, y = 320 is the bottom right of the screen
 
 display.colour(r, g, b)
 
-r = Red 0-255 
-g = Green 0-255 
-b = Blue 0-255
+| Parameter | Description |
+| --- | --- |
+|r | Red 0-255 |
+|g | Green 0-255 |
+|b | Blue 0-255 |
 
 ### Example
 
@@ -47,14 +39,31 @@ red = display.colour(255,0,0)
 
 display.pixel(x, y, colour)
 
-x = screen x
-y = screen y
-colour = colour for pixel
+| Parameter | Description |
+| --- | --- |
+| x | screen x |
+| y | screen y |
+| colour | colour for pixel |
 
 ### Example
 
 #Set central pixel white
+
 display.pixel(240,160, display.colour(255,255,255))
+
+# Fill screen with a single colour 
+
+display.fill(color)
+
+| Parameter | Description |
+| --- | --- |
+| colour | colour for screen |
+
+### Example
+
+#Set whole screen white
+
+display.fill(display.colour(255,255,255))
 
 
 # Text
