@@ -157,17 +157,23 @@ display.line(x0, y0, x1, y1, color)
 
 display.line(20, 100, 400, 120, display.color(0,255,0))
 
-# Tringle
+# Triangle
 
-    def triangle(self, x0, y0, x1, y1, x2, y2, color, fill=False):
-        print('triangle')
+display.triangle(x0, y0, x1, y1, x2, y2, color, fill=False):
 
 | Parameter | Description |
 | --- | --- |
-|r | Red 0-255 |
-|g | Green 0-255 |
-|b | Blue 0-255 |
+| x0 | screen x position of 1st corner of the triangle |
+| y0 | screen y position of 1st corner of the triangle |
+| x1 | screen x position of 2nd corner of the triangle |
+| y1 | screen y position of 2nd corner of the triangle |
+| x1 | screen x position of 3rd corner of the triangle |
+| y1 | screen y position of 3rd corner of the triangle |
+| colour | the colour for the triangle |
+| fill | whether the triangle should be filled with colour |
 
 ### Example
 
-red = display.colour(255,0,0)
+#draw a cyan triangle
+
+display.triangle(200, 150, 80, 280, 320, 280, display.color(0,255,255), True)
